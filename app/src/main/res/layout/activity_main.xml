@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".CalculatorActivity">
+
+    <!-- Pantalla de la calculadora -->
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/editbox_background"
+        android:gravity="end"
+        android:inputType="none"
+        android:textSize="24sp" />
+
+    <!-- Fila de botones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Botones numéricos -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <!-- Botones del 1 al 9 -->
+            <!-- Puedes replicar esto para los demás números -->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="7"
+                android:id="@+id/btn1" />
+            <Button
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="8"
+                android:id="@+id/btn2"/>
+            <Button
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="9"
+                android:id="@+id/btn3" />
+
+
+            <!-- Repite para los otros números -->
+        </LinearLayout>
+
+
+
+
+
+        <!-- Botones de operación -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="-"
+                android:id="@+id/btnLess" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="+"
+                android:id="@+id/btnAdd" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="*"
+                android:id="@+id/btnMult" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="="
+                android:id="@+id/btnEquals" />
+
+            <!-- Repite para otros botones de operación -->
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Otras filas de botones -->
+
+        <!-- Botones numéricos -->
+
+
+
+    <!-- Puedes agregar más filas para otros números y operaciones -->
+
+    <!-- Botón de igual y botón de borrar -->
+
+
+</LinearLayout>
