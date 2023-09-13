@@ -6,13 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="64dp"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:layout_margin="16dp"
+        android:layout_above="@+id/buttons_layout"
+        android:id="@+id/resultado"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="vertical">
+        android:paddingVertical="20dp"
+        android:background="#DAD9D9"
+        android:orientation="vertical"
+        android:id="@+id/buttons_layout">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -219,7 +233,7 @@
 
             <!-- Repite para los otros números -->
         </LinearLayout>
-        
+
 
     </LinearLayout>
 

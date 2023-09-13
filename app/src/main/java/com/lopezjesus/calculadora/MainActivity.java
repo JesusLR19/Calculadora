@@ -6,12 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-    private EditText editText;
-    private Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
-    private Button btnSuma, btnResta, btnMultip, btnDiv;
-    private Button btnClear, btnPunto, btnIgual, btnPar1, btnPar2;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+     TextView resultado;
+     Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
+     Button btnSuma, btnResta, btnMultip, btnDiv;
+     Button btnClear, btnPunto, btnIgual, btnPar1, btnPar2;
 
 
     @Override
@@ -154,4 +155,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onClick(View view) {
+
+    }
 }
