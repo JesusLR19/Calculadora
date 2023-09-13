@@ -9,15 +9,16 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     private EditText editText;
-    private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
+    private Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
     private Button btnSuma, btnResta, btnMultip, btnDiv;
-    private Button btnClear, btn0, btnPunto, btnIgual;
+    private Button btnClear, btnPunto, btnIgual, btnPar1, btnPar2;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editText = findViewById(R.id.editText);
         btn0 = findViewById(R.id.btn0);
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
@@ -35,10 +36,13 @@ public class MainActivity extends AppCompatActivity {
         btnClear = findViewById(R.id.btnClear);
         btnPunto = findViewById(R.id.btnPunto);
         btnIgual = findViewById(R.id.btnIgual);
+        btnPar1 = findViewById(R.id.btnPar1);
+        btnPar2 = findViewById(R.id.btnPar2);
+
 
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
             }
         });
@@ -131,6 +135,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        btnPar1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        btnPar2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

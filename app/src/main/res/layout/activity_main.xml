@@ -1,206 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".CalculatorActivity">
+    tools:context=".MainActivity">
 
-    <!-- Pantalla de la calculadora -->
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginBottom="16dp"
-        android:background="@android:drawable/editbox_background"
-        android:gravity="end"
-        android:inputType="none"
-        android:textSize="24sp" />
 
-    <!-- Fila de botones -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:orientation="vertical">
 
-
-        <!-- Fila de botones 1 (1 al 9) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="horizontal">
 
-            <!-- Botones del 1 al 9 -->
-            <!-- Puedes replicar esto para los demás números -->
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:text="("
+                android:textSize="30dp"
+                android:backgroundTint="#00BCD4"
                 android:id="@+id/btnPar1" />
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:text=")"
+                android:textSize="30dp"
+                android:backgroundTint="#00BCD4"
                 android:id="@+id/btnPar2"/>
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:text="/"
+                android:textSize="30dp"
+                android:backgroundTint="#00BCD4"
                 android:id="@+id/btnDiv" />
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:text="DEL"
+                android:textSize="30dp"
+                android:backgroundTint="#EC4B4B"
                 android:id="@+id/btnDEL" />
 
             <!-- Repite para los otros números -->
         </LinearLayout>
-
-        <!-- Nueva fila de botones 2 (4 al 6) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="horizontal">
 
-            <!-- Botones del 4 al 6 -->
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:text="7"
+                android:textSize="30dp"
+                android:backgroundTint="#00BCD4"
                 android:id="@+id/btn7" />
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:text="8"
+                android:textSize="30dp"
+                android:backgroundTint="#00BCD4"
                 android:id="@+id/btn8"/>
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:text="9"
+                android:textSize="30dp"
+                android:backgroundTint="#00BCD4"
                 android:id="@+id/btn9" />
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:text="-"
+                android:textSize="30dp"
+                android:backgroundTint="#FF9800"
                 android:id="@+id/btnResta" />
-        </LinearLayout>
 
+            <!-- Repite para los otros números -->
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:text="4"
+                android:textSize="30dp"
+                android:backgroundTint="#00BCD4"
                 android:id="@+id/btn4" />
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:text="5"
-                android:id="@+id/btn5" />
+                android:textSize="30dp"
+                android:backgroundTint="#00BCD4"
+                android:id="@+id/btn5"/>
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:text="6"
+                android:textSize="30dp"
+                android:backgroundTint="#00BCD4"
                 android:id="@+id/btn6" />
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:text="+"
+                android:textSize="30dp"
+                android:backgroundTint="#FF9800"
                 android:id="@+id/btnSuma" />
+
+            <!-- Repite para los otros números -->
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:text="1"
+                android:textSize="30dp"
+                android:backgroundTint="#00BCD4"
                 android:id="@+id/btn1" />
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:text="2"
-                android:id="@+id/btn2" />
+                android:textSize="30dp"
+                android:backgroundTint="#00BCD4"
+                android:id="@+id/btn2"/>
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:text="3"
+                android:textSize="30dp"
+                android:backgroundTint="#00BCD4"
                 android:id="@+id/btn3" />
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:text="*"
+                android:textSize="30dp"
+                android:backgroundTint="#FF9800"
                 android:id="@+id/btnMultip" />
-        </LinearLayout>
 
+            <!-- Repite para los otros números -->
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnClear"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="C" />
-
+                android:text="C"
+                android:textSize="30dp"
+                android:backgroundTint="#00BCD4"
+                android:id="@+id/btnClear" />
             <Button
-                android:id="@+id/btn0"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="0" />
-
+                android:text="0"
+                android:textSize="30dp"
+                android:backgroundTint="#00BCD4"
+                android:id="@+id/btn0"/>
             <Button
-                android:id="@+id/btnPunto"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="." />
-
+                android:text="."
+                android:textSize="30dp"
+                android:backgroundTint="#00BCD4"
+                android:id="@+id/btnPunto" />
             <Button
-                android:id="@+id/btnIgual"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="=" />
+                android:text="="
+                android:textSize="30dp"
+                android:backgroundTint="#4CAF50"
+                android:id="@+id/btnIgual" />
+
+            <!-- Repite para los otros números -->
         </LinearLayout>
-
-
+        
 
     </LinearLayout>
 
-
-
-    <!-- Puedes agregar más filas para otros números y operaciones -->
-
-    <!-- Botón de igual y botón de borrar -->
-
-
-</LinearLayout>
+</RelativeLayout>
