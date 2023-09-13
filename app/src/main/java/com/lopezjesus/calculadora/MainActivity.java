@@ -4,159 +4,86 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
+import org.mozilla.javascript.Context;
+import org.mozilla.javascript.Scriptable;
+import com.google.android.material.button.MaterialButton;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-     TextView resultado;
-     Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
-     Button btnSuma, btnResta, btnMultip, btnDiv;
-     Button btnClear, btnPunto, btnIgual, btnPar1, btnPar2;
-
+public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
+    TextView resultado,solucion;
+    MaterialButton btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
+    MaterialButton btnSuma, btnResta, btnMultip, btnDiv;
+    MaterialButton btnClear, btnPunto, btnIgual, btnPar1, btnPar2,btnDEL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        resultado = findViewById(R.id.resultado);
+        solucion = findViewById(R.id.solucion);
+        assignId(btn0,R.id.btn0);
+        assignId(btn1,R.id.btn1);
+        assignId(btn2,R.id.btn2);
+        assignId(btn3,R.id.btn3);
+        assignId(btn4,R.id.btn4);
+        assignId(btn5,R.id.btn5);
+        assignId(btn6,R.id.btn6);
+        assignId(btn7,R.id.btn7);
+        assignId(btn8,R.id.btn8);
+        assignId(btn9,R.id.btn9);
+        assignId(btnSuma,R.id.btnSuma);
+        assignId(btnResta,R.id.btnResta);
+        assignId(btnMultip,R.id.btnMultip);
+        assignId(btnDiv,R.id.btnDiv);
+        assignId(btnClear,R.id.btnClear);
+        assignId(btnPunto,R.id.btnPunto);
+        assignId(btnIgual,R.id.btnIgual);
+        assignId(btnPar1,R.id.btnPar1);
+        assignId(btnPar2,R.id.btnPar2);
+        assignId(btnDEL,R.id.btnDEL);
 
-        btn0 = findViewById(R.id.btn0);
-        btn1 = findViewById(R.id.btn1);
-        btn2 = findViewById(R.id.btn2);
-        btn3 = findViewById(R.id.btn3);
-        btn4 = findViewById(R.id.btn4);
-        btn5 = findViewById(R.id.btn5);
-        btn6 = findViewById(R.id.btn6);
-        btn7 = findViewById(R.id.btn7);
-        btn8 = findViewById(R.id.btn8);
-        btn9 = findViewById(R.id.btn9);
-        btnSuma = findViewById(R.id.btnSuma);
-        btnResta = findViewById(R.id.btnResta);
-        btnMultip = findViewById(R.id.btnMultip);
-        btnDiv = findViewById(R.id.btnDiv);
-        btnClear = findViewById(R.id.btnClear);
-        btnPunto = findViewById(R.id.btnPunto);
-        btnIgual = findViewById(R.id.btnIgual);
-        btnPar1 = findViewById(R.id.btnPar1);
-        btnPar2 = findViewById(R.id.btnPar2);
-
-
-        btn0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        btn1.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-
-            }
-        });
-        btn2.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-
-            }
-        });
-
-        btn3.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-
-            }
-        });
-        btn4.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        btn5.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        btn6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        btn7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        btn8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        btn9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        //Agregamos listeners a los botones de operaciones
-        btnSuma.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        btnResta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        btnMultip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        btnDiv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        btnIgual.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
-        });
-        btnPunto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        btnClear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        btnPar1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        btnPar2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
     }
-
+    void assignId(MaterialButton btn,int id){
+        btn = findViewById(id);
+        btn.setOnClickListener(this);
+    }
     @Override
     public void onClick(View view) {
+        MaterialButton button =(MaterialButton) view;
+        String buttonText = button.getText().toString();
+        String dataToCalculate = solucion.getText().toString();
 
+        if(buttonText.equals("DEL")){
+            solucion.setText("");
+            resultado.setText("0");
+            return;
+        }
+        if (buttonText.equals("=")){
+            solucion.setText(resultado.getText());
+            return;
+        }
+        if (buttonText.equals("C")){
+            dataToCalculate = dataToCalculate.substring(0,dataToCalculate.length()-1);
+        }else {
+            dataToCalculate = dataToCalculate +buttonText;
+        }
+        solucion.setText(dataToCalculate);
+
+        String finalResult = getResult(dataToCalculate);
+        if (!finalResult.equals("Err")){
+            resultado.setText(finalResult);
+        }
+
+    }
+    String getResult(String data){
+        try {
+            Context context = Context.enter();
+            context.setOptimizationLevel(-1);
+            Scriptable scriptable = context.initStandardObjects();
+            String finalResult = context.evaluateString(scriptable,data,"Javascript",1,null).toString();
+            return finalResult;
+        }catch (Exception e){
+            return "Err";
+        }
     }
 }
