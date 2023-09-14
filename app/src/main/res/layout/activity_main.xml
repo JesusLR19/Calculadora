@@ -7,18 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/solucion"
-        android:text="0"
-        android:textSize="32dp"
-        android:textAlignment="textEnd"
-        android:textColor="@color/black"
-        android:layout_above="@id/resultado"
-        android:layout_margin="16dp" />
-
-    <TextView
-        android:id="@+id/resultado"
+        android:id="@+id/tvResultado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/buttons_layout"
@@ -26,9 +15,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:text="0"
         android:textAlignment="textEnd"
         android:textColor="@color/black"
+        android:text=""
         android:textSize="64dp" />
 
     <LinearLayout
@@ -74,7 +63,8 @@
                 style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
                 android:text="/"
                 android:textSize="32dp"
-                android:id="@+id/btnDiv" />
+                android:id="@+id/btnDiv"
+                android:onClick="Dividir"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -84,6 +74,7 @@
                 android:text="DEL"
                 android:textSize="13sp"
                 android:id="@+id/btnDEL"
+                android:onClick="BorrarDEL"
                  />
         </LinearLayout>
         <LinearLayout
@@ -102,7 +93,8 @@
                 android:textColor="@color/white"
                 android:backgroundTint="#00BCD4"
                 android:textSize="32dp"
-                android:id="@+id/btn7" />
+                android:id="@+id/btn7"
+                android:onClick="EscribirSiete"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -111,7 +103,8 @@
                 style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
                 android:textSize="32dp"
                 android:text="8"
-                android:id="@+id/btn8" />
+                android:id="@+id/btn8"
+                android:onClick="EscribirOcho"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -120,7 +113,8 @@
                 style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
                 android:text="9"
                 android:textSize="32dp"
-                android:id="@+id/btn9" />
+                android:id="@+id/btn9"
+                android:onClick="EscribirNueve"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -130,6 +124,7 @@
                 android:text="-"
                 android:textSize="32dp"
                 android:id="@+id/btnResta"
+                android:onClick="Resta"
                 />
         </LinearLayout>
         <LinearLayout
@@ -148,7 +143,8 @@
                 android:textColor="@color/white"
                 android:backgroundTint="#00BCD4"
                 android:textSize="32dp"
-                android:id="@+id/btn4" />
+                android:id="@+id/btn4"
+                android:onClick="EscribirCuatro"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -157,7 +153,8 @@
                 style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
                 android:textSize="32dp"
                 android:text="5"
-                android:id="@+id/btn5" />
+                android:id="@+id/btn5"
+                android:onClick="EscribirCinco"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -166,7 +163,8 @@
                 style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
                 android:text="6"
                 android:textSize="32dp"
-                android:id="@+id/btn6" />
+                android:id="@+id/btn6"
+                android:onClick="EscribirSeis"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -176,6 +174,7 @@
                 android:text="+"
                 android:textSize="32dp"
                 android:id="@+id/btnSuma"
+                android:onClick="Suma"
                 />
         </LinearLayout>
         <LinearLayout
@@ -194,7 +193,8 @@
                 android:textColor="@color/white"
                 android:backgroundTint="#00BCD4"
                 android:textSize="32dp"
-                android:id="@+id/btn1" />
+                android:id="@+id/btn1"
+                android:onClick="EscribirUno"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -203,7 +203,8 @@
                 style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
                 android:textSize="32dp"
                 android:text="2"
-                android:id="@+id/btn2" />
+                android:id="@+id/btn2"
+                android:onClick="EscribirDos"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -212,7 +213,8 @@
                 style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
                 android:text="3"
                 android:textSize="32dp"
-                android:id="@+id/btn3" />
+                android:id="@+id/btn3"
+                android:onClick="EscribirTres"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -222,6 +224,7 @@
                 android:text="*"
                 android:textSize="32dp"
                 android:id="@+id/btnMultip"
+                android:onClick="Multiplicar"
                 />
         </LinearLayout>
         <LinearLayout
@@ -240,7 +243,8 @@
                 android:textColor="#FFFFFF"
                 android:backgroundTint="#FF5722"
                 android:textSize="32dp"
-                android:id="@+id/btnClear" />
+                android:id="@+id/btnClear"
+                android:onClick="ClearTv"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -249,7 +253,8 @@
                 style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
                 android:textSize="32dp"
                 android:text="0"
-                android:id="@+id/btn0" />
+                android:id="@+id/btn0"
+                android:onClick="EscribirCero"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -268,6 +273,7 @@
                 android:text="="
                 android:textSize="32dp"
                 android:id="@+id/btnIgual"
+                android:onClick="Equals"
                 />
         </LinearLayout>
 
