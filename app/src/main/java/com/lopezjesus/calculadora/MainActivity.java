@@ -154,8 +154,26 @@ public class MainActivity extends AppCompatActivity   {
             resultado = numero1+numero2;
             String resultadoStr = Float.toString(resultado);
             tvResultado.setText(resultadoStr);
+            operador = "";
         }
-        if ()
+        if (operador == "-"){
+            resultado = numero1-numero2;
+            String resultadoStr = Float.toString(resultado);
+            tvResultado.setText(resultadoStr);
+            operador = "";
+        }
+        if (operador == "/"){
+            resultado = numero1/numero2;
+            String resultadoStr = Float.toString(resultado);
+            tvResultado.setText(resultadoStr);
+            operador = "";
+        }
+        if (operador == "*"){
+            resultado = numero1*numero2;
+            String resultadoStr = Float.toString(resultado);
+            tvResultado.setText(resultadoStr);
+            operador = "";
+        }
     }
 }
 
